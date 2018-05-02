@@ -192,6 +192,9 @@ open class ChartBaseDataSet: NSObject, IChartDataSet
     /// List representing all colors that are used for drawing the actual values for this DataSet
     open var valueColors = [NSUIColor]()
 
+    /// Set legendColor
+    open var legendColors = [NSUIColor]()
+    
     /// The label string that describes the DataSet.
     open var label: String? = "DataSet"
     
@@ -418,6 +421,7 @@ open class ChartBaseDataSet: NSObject, IChartDataSet
         copy.colors = colors
         copy.valueColors = valueColors
         copy.label = label
+        copy.legendColors = legendColors
         
         return copy
     }

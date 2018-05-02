@@ -43,7 +43,7 @@ open class LegendRenderer: Renderer
             {
                 guard let dataSet = data.getDataSetByIndex(i) else { continue }
                 
-                var clrs: [NSUIColor] = dataSet.colors
+                var clrs: [NSUIColor] = dataSet.legendColors.count == 0 ? dataSet.colors : dataSet.legendColors
                 let entryCount = dataSet.entryCount
                 
                 // if we have a barchart with stacked bars
