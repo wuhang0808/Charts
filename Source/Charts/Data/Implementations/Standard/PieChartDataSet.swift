@@ -108,6 +108,8 @@ open class PieChartDataSet: ChartDataSet, IPieChartDataSet
     /// the color for the highlighted sector
     open var highlightColor: NSUIColor? = nil
     
+    /// is show rose chart
+    open var drawRoseEnable: Bool = false
     // MARK: - NSCopying
     
     open override func copyWithZone(_ zone: NSZone?) -> AnyObject

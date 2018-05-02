@@ -61,4 +61,6 @@ public protocol IPieChartDataSet: IChartDataSet
     
     /// get/sets the color for the highlighted sector
     var highlightColor: NSUIColor? { get set }
+    
+    var drawRoseEnable: Bool {get set}
 }

@@ -42,6 +42,7 @@
     
     [self setupPieChartView:_chartView];
     
+    _chartView.drawHoleEnabled = NO;
     _chartView.legend.enabled = NO;
     _chartView.delegate = self;
     
@@ -96,7 +97,7 @@
     [colors addObject:[UIColor colorWithRed:51/255.f green:181/255.f blue:229/255.f alpha:1.f]];
     
     dataSet.colors = colors;
-    
+    dataSet.drawRoseEnable = YES;
     dataSet.valueLinePart1OffsetPercentage = 0.8;
     dataSet.valueLinePart1Length = 0.2;
     dataSet.valueLinePart2Length = 0.4;
