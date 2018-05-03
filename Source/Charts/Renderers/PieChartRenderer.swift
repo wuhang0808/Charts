@@ -176,9 +176,14 @@ open class PieChartRenderer: DataRenderer
                     let arcStartPointX = center.x + radius * cos(startAngleOuter.DEG2RAD)
                     let arcStartPointY = center.y + radius * sin(startAngleOuter.DEG2RAD)
 
-                    let r = radius * (sliceAngle / maxAngle)
+                    let r = (radius - innerRadius) * (sliceAngle / maxAngle)
                     
-                    let newRadius = dataSet.drawRoseEnable ? r : radius
+                    var newRadius = radius
+                    if dataSet.drawRoseEnable {
+                        
+                        newRadius = r
+                        newRadius += innerRadius
+                    }
                     
                     let path = CGMutablePath()
                     
