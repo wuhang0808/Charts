@@ -134,6 +134,17 @@ open class PieChartRenderer: DataRenderer
         
         let sliceSpace = visibleAngleCount <= 1 ? 0.0 : getSliceSpace(dataSet: dataSet)
 
+        //最大角度值
+        var maxAngle: CGFloat = 0;
+        
+        for angle in drawAngles {
+            
+            if angle > maxAngle {
+                
+                maxAngle = angle;
+            }
+        }
+        
         context.saveGState()
         
         for j in 0 ..< entryCount
@@ -165,12 +176,21 @@ open class PieChartRenderer: DataRenderer
                     let arcStartPointX = center.x + radius * cos(startAngleOuter.DEG2RAD)
                     let arcStartPointY = center.y + radius * sin(startAngleOuter.DEG2RAD)
 
+                    let r = (radius - innerRadius) * (sliceAngle / maxAngle)
+                    
+                    var newRadius = radius
+                    if dataSet.drawRoseEnable {
+                        
+                        newRadius = r
+                        newRadius += innerRadius
+                    }
+                    
                     let path = CGMutablePath()
                     
                     path.move(to: CGPoint(x: arcStartPointX,
                                           y: arcStartPointY))
                     
-                    path.addRelativeArc(center: center, radius: radius, startAngle: startAngleOuter.DEG2RAD, delta: sweepAngleOuter.DEG2RAD)
+                    path.addRelativeArc(center: center, radius:  newRadius, startAngle: startAngleOuter.DEG2RAD, delta: sweepAngleOuter.DEG2RAD)
 
                     if drawInnerArc &&
                         (innerRadius > 0.0 || accountForSliceSpacing)

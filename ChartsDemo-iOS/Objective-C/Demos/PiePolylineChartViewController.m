@@ -42,9 +42,11 @@
     
     [self setupPieChartView:_chartView];
     
-    _chartView.legend.enabled = NO;
+    _chartView.drawCenterTextEnabled = NO;
+   // _chartView.drawHoleEnabled = NO;
+   // _chartView.legend.enabled = NO;
     _chartView.delegate = self;
-    
+    _chartView.drawEntryLabelsEnabled = NO;
     [_chartView setExtraOffsetsWithLeft:20.f top:0.f right:20.f bottom:0.f];
     
     _sliderX.value = 4.0;
@@ -95,8 +97,8 @@
     [colors addObjectsFromArray:ChartColorTemplates.pastel];
     [colors addObject:[UIColor colorWithRed:51/255.f green:181/255.f blue:229/255.f alpha:1.f]];
     
+    dataSet.drawRoseEnable = YES;
     dataSet.colors = colors;
-    
     dataSet.valueLinePart1OffsetPercentage = 0.8;
     dataSet.valueLinePart1Length = 0.2;
     dataSet.valueLinePart2Length = 0.4;
