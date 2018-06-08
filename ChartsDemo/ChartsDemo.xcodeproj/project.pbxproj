@@ -75,6 +75,9 @@
 		225B368B1F6EBA640005B3D5 /* StackedBarChartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BEAED1A1ABBFB340013F194 /* StackedBarChartViewController.xib */; };
 		225B368C1F6EBBB00005B3D5 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0630AE411D8126C0008859B0 /* Charts.framework */; };
 		225B368D1F6EBBB00005B3D5 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0630AE411D8126C0008859B0 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5479ED3D20AAB3CB0028757B /* NodeChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5479ED3B20AAB3CB0028757B /* NodeChartViewController.m */; };
+		5479ED3E20AAB3CB0028757B /* NodeChartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5479ED3C20AAB3CB0028757B /* NodeChartViewController.xib */; };
+		5479ED5820AC18D20028757B /* TangramMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 5479ED5620AC18D20028757B /* TangramMock.json */; };
 		55E356501ADC638F00A57971 /* BubbleChartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55E3564D1ADC638F00A57971 /* BubbleChartViewController.xib */; };
 		55E356511ADC638F00A57971 /* BubbleChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E3564F1ADC638F00A57971 /* BubbleChartViewController.m */; };
 		5B0CC7851ABB875400665592 /* PieChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0CC7831ABB875400665592 /* PieChartViewController.m */; };
@@ -233,6 +236,10 @@
 		225B36581F6EBA410005B3D5 /* BarChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartViewController.swift; sourceTree = "<group>"; };
 		225B36591F6EBA410005B3D5 /* SinusBarChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinusBarChartViewController.swift; sourceTree = "<group>"; };
 		225B365A1F6EBA410005B3D5 /* CandleStickChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleStickChartViewController.swift; sourceTree = "<group>"; };
+		5479ED3A20AAB3CB0028757B /* NodeChartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeChartViewController.h; sourceTree = "<group>"; };
+		5479ED3B20AAB3CB0028757B /* NodeChartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NodeChartViewController.m; sourceTree = "<group>"; };
+		5479ED3C20AAB3CB0028757B /* NodeChartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NodeChartViewController.xib; sourceTree = "<group>"; };
+		5479ED5620AC18D20028757B /* TangramMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TangramMock.json; sourceTree = "<group>"; };
 		55E3564D1ADC638F00A57971 /* BubbleChartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BubbleChartViewController.xib; sourceTree = "<group>"; };
 		55E3564E1ADC638F00A57971 /* BubbleChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubbleChartViewController.h; sourceTree = "<group>"; };
 		55E3564F1ADC638F00A57971 /* BubbleChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubbleChartViewController.m; sourceTree = "<group>"; };
@@ -520,6 +527,7 @@
 		5B8EAF2E1AB32E15009697AA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5479ED5620AC18D20028757B /* TangramMock.json */,
 				B64D06EA1FB199130067418D /* Launch Screen.storyboard */,
 				5B8EAF2F1AB32E15009697AA /* Images.xcassets */,
 				5B613DA21D526AD5000F1E98 /* markers */,
@@ -586,6 +594,9 @@
 				5BEAED3E1ABC1AC60013F194 /* SinusBarChartViewController.m */,
 				5BEAED181ABBFB340013F194 /* StackedBarChartViewController.h */,
 				5BEAED191ABBFB340013F194 /* StackedBarChartViewController.m */,
+				5479ED3A20AAB3CB0028757B /* NodeChartViewController.h */,
+				5479ED3B20AAB3CB0028757B /* NodeChartViewController.m */,
+				5479ED3C20AAB3CB0028757B /* NodeChartViewController.xib */,
 			);
 			path = Demos;
 			sourceTree = "<group>";
@@ -755,11 +766,13 @@
 				5B613DB51D526EA8000F1E98 /* RadarMarkerView.xib in Resources */,
 				5BD47E611ABB3C91008FCEC6 /* LineChart2ViewController.xib in Resources */,
 				5BEAED131ABBFB2B0013F194 /* AnotherBarChartViewController.xib in Resources */,
+				5479ED5820AC18D20028757B /* TangramMock.json in Resources */,
 				5BEAED411ABC1AC60013F194 /* SinusBarChartViewController.xib in Resources */,
 				5BEAED371ABC192F0013F194 /* RadarChartViewController.xib in Resources */,
 				5B8EAF241AB3271B009697AA /* DemoListViewController.xib in Resources */,
 				5BEAED261ABC0BE20013F194 /* MultipleBarChartViewController.xib in Resources */,
 				5BEAED3C1ABC199F0013F194 /* ColoredLineChartViewController.xib in Resources */,
+				5479ED3E20AAB3CB0028757B /* NodeChartViewController.xib in Resources */,
 				5BEAED321ABC18F00013F194 /* CubicLineChartViewController.xib in Resources */,
 				5BEAED281ABC0BE20013F194 /* MultipleLinesChartViewController.xib in Resources */,
 				5B9624421B38608C007763E2 /* NegativeStackedBarChartViewController.xib in Resources */,
@@ -830,6 +843,7 @@
 			files = (
 				5B613DF21D5A60DF000F1E98 /* LargeValueFormatter.swift in Sources */,
 				5BEAED1B1ABBFB340013F194 /* ScatterChartViewController.m in Sources */,
+				5479ED3D20AAB3CB0028757B /* NodeChartViewController.m in Sources */,
 				5B0CC7851ABB875400665592 /* PieChartViewController.m in Sources */,
 				0439A3541C9FF95F00496F83 /* PiePolylineChartViewController.m in Sources */,
 				5B57BBBB1A9B26AA0036A6CC /* DemoListViewController.m in Sources */,

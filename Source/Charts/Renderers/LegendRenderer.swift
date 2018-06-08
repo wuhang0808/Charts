@@ -150,6 +150,42 @@ open class LegendRenderer: Renderer
                         )
                     )
                 }
+                else if dataSet is INodeChartDataSet
+                {
+                    let pds = dataSet as! NodeChartDataSet
+                    
+                    for j in 0..<min(clrs.count, entryCount)
+                    {
+                        entries.append(
+                            LegendEntry(
+                                label: pds.legendValue[j],
+                                form: dataSet.form,
+                                formSize: dataSet.formSize,
+                                formLineWidth: dataSet.formLineWidth,
+                                formLineDashPhase: dataSet.formLineDashPhase,
+                                formLineDashLengths: dataSet.formLineDashLengths,
+                                formColor: clrs[j]
+                            )
+                        )
+                    }
+                    
+                    if dataSet.label != nil
+                    {
+                        // add the legend description label
+                        
+                        entries.append(
+                            LegendEntry(
+                                label: dataSet.label,
+                                form: .none,
+                                formSize: CGFloat.nan,
+                                formLineWidth: CGFloat.nan,
+                                formLineDashPhase: 0.0,
+                                formLineDashLengths: nil,
+                                formColor: nil
+                            )
+                        )
+                    }
+                }
                 else
                 { // all others
                     

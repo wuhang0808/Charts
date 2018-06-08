@@ -50,8 +50,8 @@
     _chartView.delegate = self;
     
     ChartLegend *l = _chartView.legend;
-    l.horizontalAlignment = ChartLegendHorizontalAlignmentRight;
-    l.verticalAlignment = ChartLegendVerticalAlignmentTop;
+    l.horizontalAlignment = ChartLegendHorizontalAlignmentCenter;
+    l.verticalAlignment = ChartLegendVerticalAlignmentBottom;
     l.orientation = ChartLegendOrientationVertical;
     l.drawInside = NO;
     l.xEntrySpace = 7.0;

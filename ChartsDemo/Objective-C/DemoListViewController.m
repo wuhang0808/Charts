@@ -33,6 +33,7 @@
 #import "LineChartTimeViewController.h"
 #import "LineChartFilledViewController.h"
 #import "HalfPieChartViewController.h"
+#import "NodeChartViewController.h"
 
 @interface DemoListViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -167,6 +168,11 @@
                           @"title": @"Half Pie Chart",
                           @"subtitle": @"This demonstrates how to create a 180 degree PieChart.",
                           @"class": HalfPieChartViewController.class
+                          },
+                      @{
+                          @"title" : @"Node Chart",
+                          @"subtitle" : @"",
+                          @"class" : NodeChartViewController.class
                           }
                       ];
     //FIXME: Add TimeLineChart

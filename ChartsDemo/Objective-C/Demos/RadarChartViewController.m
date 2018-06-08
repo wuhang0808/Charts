@@ -175,7 +175,7 @@
     [data setValueFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:8.f]];
     [data setDrawValues:NO];
     data.valueTextColor = UIColor.whiteColor;
-    
+
     _chartView.data = data;
 }
 

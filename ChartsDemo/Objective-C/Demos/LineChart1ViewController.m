@@ -56,7 +56,7 @@
     [_chartView setScaleEnabled:YES];
     _chartView.pinchZoomEnabled = YES;
     _chartView.drawGridBackgroundEnabled = NO;
-
+    
     // x-axis limit line
     ChartLimitLine *llXAxis = [[ChartLimitLine alloc] initWithLimit:10.0 label:@"Index 10"];
     llXAxis.lineWidth = 4.0;
@@ -85,12 +85,12 @@
     [leftAxis removeAllLimitLines];
     [leftAxis addLimitLine:ll1];
     [leftAxis addLimitLine:ll2];
-    leftAxis.axisMaximum = 200.0;
-    leftAxis.axisMinimum = -50.0;
+//    leftAxis.axisMaximum = 200.0;
+//    leftAxis.axisMinimum = -50.0;
     leftAxis.gridLineDashLengths = @[@5.f, @5.f];
     leftAxis.drawZeroLineEnabled = NO;
     leftAxis.drawLimitLinesBehindDataEnabled = YES;
-    
+
     _chartView.rightAxis.enabled = NO;
     
     //[_chartView.viewPortHandler setMaximumScaleY: 2.f];
@@ -137,7 +137,7 @@
     
     for (int i = 0; i < count; i++)
     {
-        double val = arc4random_uniform(range) + 3;
+        double val = arc4random_uniform(range) + 500;
         [values addObject:[[ChartDataEntry alloc] initWithX:i y:val icon: [UIImage imageNamed:@"icon"]]];
     }
     
